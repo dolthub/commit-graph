@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react";
+import { Tooltip } from "react-tooltip";
+import { fromCommitNodeToCommit } from "../../helpers/utils";
 import { Branch, CommitNode, Diff } from "../../types";
 import BranchLabel from "../BranchLabel";
-import { excerpt } from "@dolthub/web-utils";
+import { excerpt } from "../../helpers/inlineUtils";
 import css from "./index.module.css";
-import { Tooltip } from "react-tooltip";
 import DiffSection from "../DiffSection";
-import { useOnClickOutside } from "@dolthub/react-hooks";
-import { fromCommitNodeToCommit } from "src/helpers/utils";
+import { useOnClickOutside } from "../../helpers/useOnClickOutside";
 
 type Props = {
   commit: CommitNode;
@@ -17,7 +17,6 @@ type Props = {
   dateFormatFn?: (d: string | number | Date) => string;
   currentBranch?: string;
   fullSha?: boolean;
-  clicked?: boolean;
   getDiff?: (base: string, head: string) => Promise<Diff | undefined>;
   forDolt?: boolean;
 };
@@ -40,7 +39,7 @@ export default function CommitDetails({
     ? dateFormatFn(commit.commitDate)
     : commit.commitDate.toLocaleDateString();
   const hashBr = commit.hash.slice(0, 7);
-  const committer = commit.committer;
+  const { committer } = commit;
   const message = commit.message || "";
   const commitHashAuthorDate = `${fullSha ? commit.hash : hashBr} - ${committer} - ${date}`;
   const [color, setColor] = useState(commit.commitColor);
@@ -59,10 +58,12 @@ export default function CommitDetails({
       <div
         className={css.container}
         onMouseOver={() => {
-          mouseOver(), setShowDiffButton(true);
+          mouseOver();
+          setShowDiffButton(true);
         }}
         onMouseLeave={() => {
-          mouseLeave(), setShowDiffButton(false);
+          mouseLeave();
+          setShowDiffButton(false);
         }}
         onClick={onClick}
       >
@@ -70,7 +71,7 @@ export default function CommitDetails({
           <div>
             {commit.onCommitNavigate ? (
               <span
-                style={{ color: color }}
+                style={{ color }}
                 className={`${css.bold} ${css.clickable}`}
                 onClick={() => {
                   commit.onCommitNavigate!();
@@ -82,7 +83,7 @@ export default function CommitDetails({
               </span>
             ) : commit.commitLink ? (
               <a
-                style={{ color: color }}
+                style={{ color }}
                 href={commit.commitLink as string}
                 className={css.bold}
                 onMouseOver={() => setColor("#1f6dc6")}

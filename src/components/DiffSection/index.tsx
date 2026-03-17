@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ChangedItem, Commit, Diff } from "../../types";
 import css from "./index.module.css";
 import ChangedFileDetails from "./ChangedFileDetails";
-import { pluralize } from "@dolthub/web-utils";
-import { SmallLoader } from "@dolthub/react-components";
+import { pluralize } from "../../helpers/inlineUtils";
+import { SmallLoader } from "../SmallLoader";
 
 type Props = {
   commit: Commit;
@@ -65,8 +65,8 @@ export default function DiffSection({ commit, diff, forDolt, loading }: Props) {
             )}
           </div>
           <ul className={css.list}>
-            {files.map(file => (
-              <ChangedFileDetails key={file.filename} file={file} />
+            {files.map(f => (
+              <ChangedFileDetails key={f.filename} file={f} />
             ))}
           </ul>
         </>
@@ -85,8 +85,8 @@ function getChanged(files: ChangedItem[]): GetChangedReturnType {
   let added = 0;
   let modified = 0;
   let deleted = 0;
-  files.forEach(file => {
-    switch (file.status) {
+  files.forEach(f => {
+    switch (f.status) {
       case "added":
       case "new":
       case "created":
@@ -102,6 +102,8 @@ function getChanged(files: ChangedItem[]): GetChangedReturnType {
       case "removed":
       case "dropped":
         deleted++;
+        break;
+      default:
         break;
     }
   });
