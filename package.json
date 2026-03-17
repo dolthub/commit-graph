@@ -54,6 +54,7 @@
     "reactjs-popup": "^2.0.6"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^1.0.0",
@@ -64,17 +65,8 @@
     "@types/jest": "^30.0.0",
     "@types/react": "^19.2.14",
     "@types/react-infinite-scroller": "^1.2.5",
-    "@typescript-eslint/eslint-plugin": "8.57.1",
-    "@typescript-eslint/parser": "8.57.1",
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb-base": "latest",
-    "eslint-config-airbnb-typescript": "latest",
+    "eslint": "^10",
     "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-css-modules": "^2.12.0",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jest": "^29.15.0",
-    "eslint-plugin-jest-dom": "^5.5.0",
-    "eslint-plugin-testing-library": "^7.16.0",
     "gh-pages": "^6.1.1",
     "jest": "^30.2.0",
     "npm-run-all": "^4.1.5",
@@ -85,7 +77,8 @@
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^10",
     "ts-jest": "^29.1.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.2",
+    "typescript-eslint": "^8.57.1"
   },
   "peerDependencies": {
     "react": ">=19.0.0",
