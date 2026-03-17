@@ -29,6 +29,7 @@
     "test": "jest",
     "prettier": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css}\"",
     "prettier-fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css}\"",
+    "compile": "tsc -b",
     "ci": "npm-run-all prettier lint test build build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
