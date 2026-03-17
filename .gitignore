@@ -1,6 +1,10 @@
 # dependencies
 /node_modules
 
+# yarn berry
+.yarn/cache
+.yarn/install-state.gz
+
 # next.js
 /.next/
 .env.*.local
