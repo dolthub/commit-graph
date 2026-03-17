@@ -1,13 +1,11 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: weekly
-    time: "09:30"
-    timezone: America/Los_Angeles
-  open-pull-requests-limit: 10
-  reviewers:
-  - liuliu-dev
-  labels:
-  - dependencies
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: monthly
+      time: "09:30"
+      timezone: America/Los_Angeles
+    open-pull-requests-limit: 10
+    labels:
+      - dependencies
