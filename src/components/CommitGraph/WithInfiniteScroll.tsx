@@ -1,6 +1,6 @@
 import React from "react";
 import InfiniteScroll from "react-infinite-scroller";
-import CommitGraph from ".";
+import CommitGraph from "./CommitGraph";
 import { Branch, Commit, CommitNode, Diff, GraphStyle } from "../../types";
 import css from "./index.module.css";
 
