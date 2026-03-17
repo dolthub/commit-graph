@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: '^18.0.0'
 
+      - name: Enable corepack
+        run: corepack enable
+
       #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
