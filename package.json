@@ -65,7 +65,7 @@
     "@types/react-infinite-scroller": "^1.2.5",
     "@typescript-eslint/eslint-plugin": "8.57.1",
     "@typescript-eslint/parser": "8.57.1",
-    "eslint": "^8.57.0",
+    "eslint": "^10.0.3",
     "eslint-config-airbnb-base": "latest",
     "eslint-config-airbnb-typescript": "latest",
     "eslint-config-prettier": "^10.0.1",
