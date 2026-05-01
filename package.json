@@ -70,7 +70,7 @@
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^10",
     "ts-jest": "^29.1.2",
-    "typescript": "^5.4.2",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.57.1"
   },
   "peerDependencies": {
