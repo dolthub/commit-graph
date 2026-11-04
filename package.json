@@ -1,22 +1,29 @@
 {
-  "name": "commit-graph",
-  "version": "2.3.12",
-  "homepage": "https://liuliu-dev.github.io/CommitGraph/",
-  "author": "Liu Liu <liuliu.developer@gmail.com>",
+  "name": "@dolthub/commit-graph",
+  "version": "2.4.1",
+  "homepage": "https://github.com/dolthub/commit-graph",
+  "author": "DoltHub",
   "description": "A React component to visualize a commit graph.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "packageManager": "yarn@4.13.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "contributors": [
     {
       "name": "Xiang Zhu",
       "email": "zxwind@gmail.com"
+    },
+    {
+      "name": "Liu Liu",
+      "email": "liuliu.developer@gmail.com"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/liuliu-dev/CommitGraph"
+    "url": "https://github.com/dolthub/commit-graph"
   },
   "license": "MIT",
   "keywords": [

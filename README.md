@@ -1,6 +1,8 @@
 # Commit Graph
 
-[![readme-header](https://github.com/liuliu-dev/CommitGraph/blob/main/graph.gif)](https://liuliu-dev.github.io/CommitGraph/)
+This package is a fork of [liuliu-dev/CommitGraph](https://github.com/liuliu-dev/CommitGraph).
+
+[![readme-header](https://raw.githubusercontent.com/dolthub/CommitGraph/main/graph.gif)](https://liuliu-dev.github.io/CommitGraph/)
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
